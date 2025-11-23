@@ -4,10 +4,14 @@ images form Google Cloud Storage.
 
 ## Setup
 
+### Google Cloud側の準備
+
 1. Cloud Storageでバケット作成、画像をアップロード
 2. Storageオブジェクトユーザのロールでアカウントを作成（IAM）
 3. アカウントのキーを作成し、JSONファイル（秘密鍵）をダウンロード
 4. ダウンロードしたJSONファイルをプロジェクト下に配置
+
+### ローカル側の準備
 
 ```sh
 composer install
@@ -35,3 +39,10 @@ Cloud Storageはクレカ登録が必要だが、Always Free(無料枠内)で、
 2. サービスアカウントを作成
 3. ロールで「Storage オブジェクト閲覧者」または「Storageオブジェクトユーザー」を付与
 4. キーを作成 → JSON形式でダウンロード
+
+## References
+
+- [Google Cloud Console](https://console.cloud.google.com/)
+- [PHP client libraries | Google Cloud Documentation](https://docs.cloud.google.com/php/docs/reference/cloud-storage/latest)
+- [google-cloud-php](https://github.com/googleapis/google-cloud-php)
+- [phpdotenv](https://github.com/vlucas/phpdotenv)
